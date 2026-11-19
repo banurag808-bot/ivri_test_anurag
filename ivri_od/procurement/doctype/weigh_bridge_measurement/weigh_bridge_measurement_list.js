@@ -277,6 +277,22 @@ async function make_wbm_filters_dropdown(listview) {
 			wrapper
 		);
 	});
+
+	// Date: a from-to range. "date" holds the date and time, so an exact match would hardly ever hit;
+	// "Between" takes every weighment from the start of the first day to the end of the last day.
+	if (!listview.page.fields_dict.date) {
+		listview.page.add_field(
+			{
+				fieldtype: "DateRange",
+				fieldname: "date",
+				label: __("Date"),
+				condition: "Between",
+				is_filter: 1,
+				onchange: () => listview.filter_area.debounced_refresh_list_view(),
+			},
+			wrapper
+		);
+	}
 }
 
 // The list columns that are not "In List View" in the DocType must be fetched too.
