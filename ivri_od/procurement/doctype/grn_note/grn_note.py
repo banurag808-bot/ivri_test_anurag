@@ -1226,23 +1226,22 @@ def _entry_rows_for_pass(pass_unique_key: str) -> list[dict]:
 		filters={"pass_unique_key": key},
 		fields=[
 			"name",
-			"entry_date",
-			"entry_time",
 			"agent_name",
 			"pacs_name",
 			"entry_quantity",
 			"entry_price_per_quintal",
 			"total_amount",
 		],
-		order_by="entry_date desc, entry_time desc, creation desc",
+		order_by="creation desc",
 	)
 	out = []
 	for row in rows:
 		out.append(
 			{
 				"entry": row.name,
-				"entry_date": row.entry_date,
-				"entry_time": row.entry_time,
+				# The Entry doctype has no date or time field: these stay blank.
+				"entry_date": None,
+				"entry_time": None,
 				"agent_name": (row.agent_name or "").strip(),
 				"pacs_name": (row.pacs_name or "").strip(),
 				"entry_quantity": flt(row.entry_quantity),
