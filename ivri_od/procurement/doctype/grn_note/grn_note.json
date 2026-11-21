@@ -154,7 +154,6 @@
    "fieldname": "receipt_datetime",
    "fieldtype": "Datetime",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Receipt Date & Time",
    "read_only": 1,
    "reqd": 1
@@ -164,7 +163,8 @@
    "fieldtype": "Date",
    "hidden": 1,
    "label": "Receipt Date",
-   "read_only": 1
+   "read_only": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "receipt_time",
@@ -180,7 +180,6 @@
   {
    "fieldname": "cmr_season",
    "fieldtype": "Data",
-   "in_standard_filter": 1,
    "label": "CMR Season",
    "read_only": 1,
    "depends_on": "eval:!doc.is_local_procurement && !doc.is_rice_dispatch"
@@ -224,8 +223,7 @@
    "fieldtype": "Data",
    "label": "TP No",
    "read_only": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1
+   "in_list_view": 1
   },
   {
    "fieldname": "transit_pass_datetime",
@@ -246,7 +244,8 @@
    "fieldtype": "Int",
    "label": "Bags (In No.)",
    "non_negative": 1,
-   "read_only": 1
+   "read_only": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "column_break_tp",
@@ -261,7 +260,6 @@
   {
    "fieldname": "ppc",
    "fieldtype": "Data",
-   "in_standard_filter": 1,
    "label": "PPC",
    "read_only": 1,
    "in_list_view": 1
@@ -275,7 +273,6 @@
    "fieldname": "vehicle_no",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Vehicle",
    "read_only": 1
   },
@@ -366,7 +363,6 @@
    "fieldname": "rst_no",
    "fieldtype": "Autocomplete",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "RST No",
    "reqd": 1
   },
@@ -448,7 +444,6 @@
    "fieldname": "mill_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Mill Name",
    "read_only": 1,
    "description": "Government paddy: from the Transit Pass. Rice and private deals: from the weighment (RST Mill No)."
@@ -606,7 +601,8 @@
    "label": "Moisture(%)",
    "non_negative": 1,
    "precision": "2",
-   "read_only": 1
+   "read_only": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "dust",
@@ -614,7 +610,8 @@
    "label": "Dust(kg)",
    "non_negative": 1,
    "precision": "2",
-   "read_only": 1
+   "read_only": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "paddy_type",
@@ -740,7 +737,6 @@
    "fieldname": "tp_fulfillment_status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "TP Status",
    "options": "\nPending\nIn Progress\nTP Completed",
    "read_only": 1
@@ -752,8 +748,7 @@
    "in_list_view": 1,
    "label": "Chhatni Status",
    "options": "\nChhatni Not Received\nChhatni Pending\nChhatni Received\nExtra Chhatni Received",
-   "read_only": 1,
-   "in_standard_filter": 1
+   "read_only": 1
   },
   {
    "depends_on": "eval:!doc.is_local_procurement && !doc.is_rice_dispatch",
@@ -769,7 +764,6 @@
    "fieldtype": "Check",
    "label": "Rice Delivery to Depo",
    "read_only": 1,
-   "in_standard_filter": 1,
    "description": "Rice sent out to an RRC / FCI depo. A record only: not paddy received, not in Transit Pass totals, Mandi Book or paddy stock, never posted to stock."
   },
   {
@@ -802,7 +796,6 @@
    "fieldtype": "Data",
    "label": "Lot No",
    "read_only": 1,
-   "in_standard_filter": 1,
    "in_list_view": 1
   },
   {
@@ -810,8 +803,7 @@
    "fieldname": "depo_name",
    "fieldtype": "Data",
    "label": "Depo Name",
-   "read_only": 1,
-   "in_standard_filter": 1
+   "read_only": 1
   },
   {
    "fieldname": "private_deal_section",
@@ -824,7 +816,6 @@
    "fieldtype": "Data",
    "label": "Transaction Type",
    "read_only": 1,
-   "in_standard_filter": 1,
    "description": "Purchase (buying) or Sale (selling)."
   },
   {
