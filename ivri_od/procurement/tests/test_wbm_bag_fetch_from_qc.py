@@ -342,7 +342,7 @@ class TestFormFields(unittest.TestCase):
 		self.assertEqual((bag_type["label"], bag_type["options"], bag_type.get("read_only")), ("Bag Type", "Weigh Bridge Bag Detail", 1))
 		self.assertEqual(
 			(condition["label"], condition["options"], condition.get("read_only")),
-			("Bag Condition (Old / New)", "Quality Check Old New Bag Detail", 1),
+			("Paddy Type (In Bags)", "Quality Check Old New Bag Detail", 1),
 		)
 		self.assertLess(self.wbm_order.index("bag_weight_details"), self.wbm_order.index("old_new_bags"))
 		for table in (bag_type, condition):
@@ -359,7 +359,7 @@ class TestFormFields(unittest.TestCase):
 		self.assertEqual(self.rst_order.index("new_bags"), self.rst_order.index("old_bags") + 1)
 
 	def test_bag_condition_label_on_qc_and_grn(self):
-		self.assertEqual(self.qc["old_new_bags"]["label"], "Bag Condition (Old / New)")
+		self.assertEqual(self.qc["old_new_bags"]["label"], "Paddy Type (In Bags)")
 		self.assertEqual(self.grn["old_new_bags"]["label"], "Bag Condition (Old / New)")
 		self.assertNotIn("old_bags", self.grn)
 

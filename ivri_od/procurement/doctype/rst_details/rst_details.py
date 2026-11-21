@@ -147,7 +147,7 @@ class RSTDetails(Document):
 		condition = cint(self.get("old_bags")) + cint(self.get("new_bags"))
 		if condition and self.total_bags and condition != self.total_bags:
 			frappe.msgprint(
-				_("Old Bags + New Bags ({0}) is not equal to Jute Bags + Plastic Bags ({1}). Please check.").format(
+				_("Old Paddy Bags + New Paddy Bags ({0}) is not equal to Jute Bags + Plastic Bags ({1}). Please check.").format(
 					condition, self.total_bags
 				),
 				title=_("Bag Count Mismatch"),

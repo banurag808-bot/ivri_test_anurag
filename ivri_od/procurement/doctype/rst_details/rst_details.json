@@ -312,7 +312,7 @@
   {
    "fieldname": "old_bags",
    "fieldtype": "Int",
-   "label": "Old Bags",
+   "label": "Old Paddy Bags",
    "non_negative": 1,
    "default": "0",
    "description": "Bag Condition: old bags."
@@ -321,7 +321,7 @@
    "default": "0",
    "fieldname": "new_bags",
    "fieldtype": "Int",
-   "label": "New Bags",
+   "label": "New Paddy Bags",
    "non_negative": 1,
    "description": "Bag Condition: new bags."
   },

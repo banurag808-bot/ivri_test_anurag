@@ -227,13 +227,13 @@
   {
    "fieldname": "old_new_bags_section",
    "fieldtype": "Section Break",
-   "label": "Bag Condition (Old / New)"
+   "label": "Paddy Type (In Bags)"
   },
   {
    "cannot_add_rows": 1,
    "fieldname": "old_new_bags",
    "fieldtype": "Table",
-   "label": "Bag Condition (Old / New)",
+   "label": "Paddy Type (In Bags)",
    "options": "Quality Check Old New Bag Detail"
   },
   {

@@ -4,8 +4,8 @@
 const QC_CHILD_TABLE_CONFIG = [
 	{
 		fieldname: "old_new_bags",
-		label: __("Bag Condition (Old / New)"),
-		hint: __("Old Bags / New Bags"),
+		label: __("Paddy Type (In Bags)"),
+		hint: __("Old Paddy Bags / New Paddy Bags"),
 		is_filled: is_old_new_bag_row_filled,
 	},
 	{
